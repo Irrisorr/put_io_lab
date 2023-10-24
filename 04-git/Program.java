@@ -1,6 +1,7 @@
 class Program{
     public static void main(String[] args) {
-        System.out.println("Hello, World and Universe !"); 
+        System.out.println("Hello, World and Universe !");
+        System.out.println("\n what's up?!");
     	char[] symbols = new char[9];
         init(symbols);
         System.out.println(new String(symbols));
