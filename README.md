@@ -1,4 +1,4 @@
-# IO--4_lab+zmiana linii *wow!*
+# IO--4_lab + zmiana linii w local git *wow!*
 
 nr ind: 153992
 ____
