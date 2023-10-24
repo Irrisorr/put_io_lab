@@ -1,4 +1,5 @@
-# IO--4_lab
+# IO--4_lab+zmiana linii *wow!*
+
 nr ind: 153992
 ____
 Imię: Heorhi (łaciński), Grzegorz (Polski), George (English)  
