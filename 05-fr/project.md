@@ -17,9 +17,9 @@ Specyfikacja wymagań funkcjonalnych w ramach informatyzacji procesu sprzedaży 
 **Scenariusz główny:**
 1. [Sprzedający](#ac1) wystawia produkt na aukcję. ([UC1](#uc1))
 2. [Kupujący](#ac2) oferuje kwotę za produkt wyższą od aktualnie najwyższej oferty.  ([UC2](#uc2), [BR1](#br1))
-3. [Kupujący](#ac2) wygrywa aukcję ([UC3](#uc3), [BR2](#br2))
-4. [Kupujący](#ac2) przekazuje należność Sprzedającemu. ([UC4](#uc4))
-5. [Sprzedający](#ac1) przekazuje produkt Kupującemu. ([UC5](#uc5))
+3. [Kupujący](#ac2) wygrywa aukcję ([BR2](#br2))
+4. [Kupujący](#ac2) przekazuje należność Sprzedającemu. ([UC3](#uc3))
+5. [Sprzedający](#ac1) przekazuje produkt Kupującemu. ([UC4](#uc4))
 
 **Scenariusze alternatywne:** 
 
@@ -81,28 +81,37 @@ Osoba chcąca zakupić produkt na aukcji.
 <a id="uc2"></a>
 ### UC2: Oferowanie danych oraz kwotę przez kupującego 
 
-**Aktorzy:** [Sprzedający](#ac1), [Kupujący](#ac2)
+**Aktorzy:** [Kupujący](#ac2)
 
 **Scenariusz główny:**
 1. [Kupujący](#ac2) zgłasza do systemu chęć kupowania produktu na aukcję.
 2. System prosi o podanie danych dla wypełnienia oferty
-3. [Kupujący](#ac2) musi wystawić ocenę odpowiednie regułe biznesowej ([BR1](#br1))
-4. [Kupujący](#ac2) czeka na koniec aukcję
+3. [Kupujący](#ac2) musi wystawić kwotę odpowiednie regułe biznesowej ([BR1](#br1))
+4. System weryfikuje poprawność danych.
+5. [Kupujący](#ac2) czeka na koniec aukcję
 
 **Scenariusze alternatywne:** 
 
-2.A. Podane niepoprawne 
-* 4.A.1. ...
+4.A. Podane niepoprawne dane 
+* 4.A.1. System informuje o błędnie podanych danych.
+* 4.A.2. Przejdź do kroku 2.
+
+5.A. Kwota kupującego została przebita przez innego kupującego
+* 5.A.1. System informuje o możliwości przegrania aukcji.
+* 5.A.2. Przejdź do kroku 3.
+
 
 ---
 
 <a id="uc3"></a>
-### UC3: Wygrywanie aukcję 
+### UC3: Przekazywanie należnośći Sprzedającemu
 
 **Aktorzy:** [Sprzedający](#ac1), [Kupujący](#ac2)
 
 **Scenariusz główny:**
-1. ...
+1. [Kupujący](#ac2) wygrywa aukcję i mu przechodzi o tym wiadomość
+2. [Sprzedający](#ac1) otrzyma wiadomość o ukończenie aukcji
+3. System wysyła ostatnio 
 
 **Scenariusze alternatywne:** 
 
@@ -112,22 +121,7 @@ Osoba chcąca zakupić produkt na aukcji.
 ---
 
 <a id="uc4"></a>
-### UC4: Przekazywanie należnośći Sprzedającemu
-
-**Aktorzy:** [Sprzedający](#ac1), [Kupujący](#ac2)
-
-**Scenariusz główny:**
-1. ...
-
-**Scenariusze alternatywne:** 
-
-1.A. ...
-* 4.A.1. ...
-
----
-
-<a id="uc5"></a>
-### UC5: Przekazywanie produktu Kupującemu
+### UC4: Przekazywanie produktu Kupującemu
 
 **Aktorzy:** [Sprzedający](#ac1), [Kupujący](#ac2)
 
