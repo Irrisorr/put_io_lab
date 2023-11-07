@@ -16,10 +16,10 @@ Specyfikacja wymagań funkcjonalnych w ramach informatyzacji procesu sprzedaży 
 
 **Scenariusz główny:**
 1. [Sprzedający](#ac1) wystawia produkt na aukcję. ([UC1](#uc1))
-2. [Kupujący](#ac2) oferuje kwotę za produkt wyższą od aktualnie najwyższej oferty. ([BR1](#br1))
-3. [Kupujący](#ac2) wygrywa aukcję ([BR2](#br2))
-4. [Kupujący](#ac2) przekazuje należność Sprzedającemu. ([BR3](#br3))
-5. [Sprzedający](#ac1) przekazuje produkt Kupującemu. ([UC2](#uc2))
+2. [Kupujący](#ac2) oferuje kwotę za produkt wyższą od aktualnie najwyższej oferty.  ([UC2](#uc2), [BR1](#br1))
+3. [Kupujący](#ac2) wygrywa aukcję ([UC3](#uc3), [BR2](#br2))
+4. [Kupujący](#ac2) przekazuje należność Sprzedającemu. ([UC4](#uc4))
+5. [Sprzedający](#ac1) przekazuje produkt Kupującemu. ([UC5](#uc5))
 
 **Scenariusze alternatywne:** 
 
@@ -50,12 +50,12 @@ Osoba chcąca zakupić produkt na aukcji.
 
 [Sprzedający](#ac1):
 * [UC1](#uc1): Wystawienie produktu na aukcję
-* Przekazuje produkt Kupującemu
+* [UC2](#uc2): Przekazuje produkt Kupującemu
 
 [Kupujący](#ac2)
 * [BR1](#br1): Oferuje kwotę za produkt wyższą od aktualnie najwyższej oferty
 * [BR2](#br2): Wygrywa aukcję
-* Przekazuje należność Sprzedającemu
+* [BR3](#br3): Przekazuje należność Sprzedającemu
 
 ---
 <a id="uc1"></a>
@@ -79,9 +79,57 @@ Osoba chcąca zakupić produkt na aukcji.
 ---
 
 <a id="uc2"></a>
-### UC2: ...
+### UC2: Oferowanie danych oraz kwotę przez kupującego 
 
-**Aktorzy:** [Sprzedający](#ac1), [Kupujący](#ac2), ...
+**Aktorzy:** [Sprzedający](#ac1), [Kupujący](#ac2)
+
+**Scenariusz główny:**
+1. [Kupujący](#ac2) zgłasza do systemu chęć kupowania produktu na aukcję.
+2. System prosi o podanie danych dla wypełnienia oferty
+3. [Kupujący](#ac2) musi wystawić ocenę odpowiednie regułe biznesowej ([BR1](#br1))
+4. [Kupujący](#ac2) czeka na koniec aukcję
+
+**Scenariusze alternatywne:** 
+
+2.A. Podane niepoprawne 
+* 4.A.1. ...
+
+---
+
+<a id="uc3"></a>
+### UC3: Wygrywanie aukcję 
+
+**Aktorzy:** [Sprzedający](#ac1), [Kupujący](#ac2)
+
+**Scenariusz główny:**
+1. ...
+
+**Scenariusze alternatywne:** 
+
+1.A. ...
+* 4.A.1. ...
+
+---
+
+<a id="uc4"></a>
+### UC4: Przekazywanie należnośći Sprzedającemu
+
+**Aktorzy:** [Sprzedający](#ac1), [Kupujący](#ac2)
+
+**Scenariusz główny:**
+1. ...
+
+**Scenariusze alternatywne:** 
+
+1.A. ...
+* 4.A.1. ...
+
+---
+
+<a id="uc5"></a>
+### UC5: Przekazywanie produktu Kupującemu
+
+**Aktorzy:** [Sprzedający](#ac1), [Kupujący](#ac2)
 
 **Scenariusz główny:**
 1. ...
@@ -121,7 +169,9 @@ Aukcję wygrywa ten z [Kupujący](#ac2)ch, który w momencie jej zakończenia (u
 
 | Przypadek użycia                                  | Aukcja | Produkt | ... |
 | ------------------------------------------------- | ------ | ------- | --- |
-| UC1: Wystawienia produktu na aukcję               |    C   |    C    | ... |
-| ???                                               |  ...   |  ...    | ... |
+| UC1: Wystawienia produktu na aukcję               |  C     |    C    | ... |
+| UC2: Oferowanie danych oraz kwotę przez kupującego|  C     |    R    | ... |
+| UC3: Przekazywanie należnośći Sprzedającemu       |  D     |    R    | ... |
+| UC4: Przekazywanie produktu Kupującemu            |        |    D    | ... |
 
 
