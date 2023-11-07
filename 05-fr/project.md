@@ -111,12 +111,13 @@ Osoba chcąca zakupić produkt na aukcji.
 **Scenariusz główny:**
 1. [Kupujący](#ac2) wygrywa aukcję i mu przechodzi o tym wiadomość
 2. [Sprzedający](#ac1) otrzyma wiadomość o ukończenie aukcji
-3. System wysyła ostatnio 
+3. System wysyła wygraną kwotę sprzedającemu
+4. [Sprzedający](#ac1) albo system zamyka aukcję
 
 **Scenariusze alternatywne:** 
 
-1.A. ...
-* 4.A.1. ...
+3.A. Kwota jest wypłacana po spotkaniu
+* 3.A.1. [Sprzedający](#ac1) przygotowuje produkt do spotkania
 
 ---
 
@@ -126,12 +127,14 @@ Osoba chcąca zakupić produkt na aukcji.
 **Aktorzy:** [Sprzedający](#ac1), [Kupujący](#ac2)
 
 **Scenariusz główny:**
-1. ...
+1. [Sprzedający](#ac1) przygotowuje produkt do wysyłki
+2. [Kupujący](#ac2) otrzymuje i sprawdza produkt
+3. [Kupujący](#ac2) odpisuje sprzedającemu
 
 **Scenariusze alternatywne:** 
 
-1.A. ...
-* 4.A.1. ...
+2.A. Produkt niezgodny z opisem lub uszkodzony
+* 2.A.1. [Kupujący](#ac2) wysyła odwrotnie produkt i prosi o zwrot pieniędzy 
 
 ---
 
@@ -144,6 +147,10 @@ Aukcja jest formą zawierania transakcji kupna-sprzedaży, w której Sprzedając
 ### BO2: Produkt
 
 Fizyczny lub cyfrowy obiekt, który ma zostać sprzedany w ramach aukcji.
+
+### BO3: Przesyłka 
+
+Rzecz opatrzona oznaczeniem adresata i adresem, przedłożona do przyjęcia lub przyjęta przez operatora pocztowego w celu przemieszczenia i doręczenia adresatowi
 
 ## Reguły biznesowe
 
