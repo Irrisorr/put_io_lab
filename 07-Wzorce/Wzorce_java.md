@@ -12,9 +12,7 @@
 11. Composite
 12. Observer
 13. Subject
-14. 
-14.1 Listener(MouseListener)
-14.2 Listener(ActionListener)
-15. MouseListener
-16. ActionListener
-17. ConcreteObserver
+14.  Listener(MouseListener) + Listener(ActionListener)
+17. MouseListener
+18. ActionListener
+19. ConcreteObserver
